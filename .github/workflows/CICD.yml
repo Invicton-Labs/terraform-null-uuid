@@ -15,9 +15,7 @@ jobs:
 
       - name: Output Matrix
         run: |
-          echo "Linux Containers Matrix: ${{ steps.matrix.outputs.linux_containers_matrix }}"
-          echo "Linux Shells Matrix: ${{ steps.matrix.outputs.linux_shells_matrix }}"
-          echo "Non-Linux Matrix: ${{ steps.matrix.outputs.non_linux_matrix }}"
+          echo "Strategy: ${{ steps.matrix.outputs.strategy }}"
 
     outputs:
       strategy: ${{ steps.matrix.outputs.strategy }}
