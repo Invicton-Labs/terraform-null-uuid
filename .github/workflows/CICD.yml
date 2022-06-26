@@ -24,7 +24,7 @@ jobs:
     needs: [Matrix]
     strategy: ${{ fromJSON(needs.Matrix.outputs.strategy)}}
     runs-on: ${{ matrix.runs-on }}
-    container: ${{ matrix.container }}
+    container: ${{ fromJSON(matrix.container) }}
     steps:
       - name: Run Tests
         id: tests
